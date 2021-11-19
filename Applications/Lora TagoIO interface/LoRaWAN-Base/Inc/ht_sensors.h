@@ -15,6 +15,7 @@ extern "C" {
 
 void HTS221_Init(void);
 void LSP22HB_Init(void);
+void initTimer(void);
 
 float readTemperatureHTS221(void);
 float readHumidity(void);

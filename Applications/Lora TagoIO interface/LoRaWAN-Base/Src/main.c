@@ -1,9 +1,9 @@
 
 /*******************************************************
 * File Name        : main.c
-* Author             : Christian Lehmen
-* Date               : 20-November-2020
-* Description      : Certification Firmware - LoRaWAN 1.0.2
+* Author           : Henrique Kuhn
+* Date             : 19-November-2021
+* Description      : Lora -> TagoIO web platform comunication
 *********************************************************/
 
 //DEBUG CONFIG FILE:
@@ -27,8 +27,6 @@
 #include "i2c.h"
 #include "ht_sensors.h"
 
-extern float temp;
-
 /*
 LoRaWAN related configs
 #include "lorawandefines.h"
@@ -47,34 +45,23 @@ int main(void)
     while(1);
   }
 
-	//HAL library hardware initialization 
-	HAL_Init();
-	//Interuption request initialization
-	IRQHandler_Config();
-	//GPIO initialization
-	MX_GPIO_Init();
-	//USART Initialization
-	MX_USART1_UART_Init();
-	//SPI Initialization
-	MX_SPI1_Init();
-	//RTC Initialization
-	MX_RTC_Init();	
-	//initializes LoRaWAN stack and radio
-	MX_I2C2_Init();
-	HTS221_Init();
-	LSP22HB_Init();
-	uint8_t tempCalibration = 0;
+	 
+	HAL_Init();							/*HAL library hardware initialization*/
+	IRQHandler_Config();		/*Interuption request initialization*/	
+	MX_GPIO_Init();					/*GPIO initialization*/	
+	MX_USART1_UART_Init();	/*USART Initialization*/	
+	MX_SPI1_Init();					/*SPI Initialization*/	
+	MX_RTC_Init();					/*RTC Initialization*/
+	MX_I2C2_Init();					/*Initializes LoRaWAN stack and radio*/
+			
+	LORAWAN_init(DEFAULT_REGION);	/*initialize LoRaWan radio parameters*/
 	
-	LORAWAN_init(DEFAULT_REGION);
-	
-	calibrateTemperatureHTS221();
-	calibrateHumidity();
-	initSensors();
+	initSensors();		/*Initialize sensors config.*/
 	
 	while (1){
 			
-		LORAWAN_tick();
-		//DelayMs(1000);
+		LORAWAN_tick(); /*handle radio routine*/
+
   }
 }
 
