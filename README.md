@@ -49,9 +49,14 @@ git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLR
 </div>
 
 
-## The Things Network (TTN)
+## The Things Network (TTN) Configuration
 
-- Create a TTN account and follow "[Adding TN gateway guide](https://git-scm.com/downloads)" steps to add a new gateway. <br/>
+- Create a TTN account at "[TTN website](https://www.thethingsnetwork.org/)" and follow "[Adding TTN gateway guide](https://git-scm.com/downloads)" steps to add a new gateway. <br/>
+
+## TagoIO Configuration 
+
+- Create a TagoIO account at "[TagoIO website](https://tago.io/)" and follow "[Adding New Device guide](https://git-scm.com/downloads)" steps to add a new device. <br/>
+- Created the device, copy and paste the "[Parser Code](https://git-scm.com/downloads)" into the "Devices -> Payload Parser" tab.
 
 ## Extra Documentation
 
