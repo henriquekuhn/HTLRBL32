@@ -48,23 +48,66 @@ git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLR
   <img src="Screenshots/Termite.jpg">
 </div>
 
+5. Save de "DevEui" code to configure the TagoIO device later.
+
+<div align="center">
+  <img src="Screenshots/Termite DevEUI.jpg">
+</div>
+
 
 ## The Things Network (TTN) Configuration
 
 - Create a TTN account at "[TTN website](https://www.thethingsnetwork.org/)" and follow "[Adding TTN gateway guide](https://git-scm.com/downloads)" steps to add a new gateway. <br/>
 
-## TagoIO Configuration 
+# TagoIO Configuration 
 
-- Create a TagoIO account at "[TagoIO website](https://tago.io/)" and follow "[Adding New Device guide](https://git-scm.com/downloads)" steps to add a new device. <br/>
-- Created the device, copy and paste the "[Parser Code](https://git-scm.com/downloads)" into the "Devices -> Payload Parser" tab.
+## New Device
+
+- Create a TagoIO account at "[TagoIO website](https://tago.io/)". <br/>
+- Add a new device:
+
+<div align="center">
+  <img src="Screenshots/newDevice.jpg">
+</div>
+
+- Loock for "Custom The Things Industries" network and select it:
+
+<div align="center">
+  <img src="Screenshots/theThingsNetwork.jpg">
+</div> 
+
+- Add the Device EUI saved before and create the device:
+
+<div align="center">
+  <img src="Screenshots/TTN DeviceEUI.jpg">
+</div>
+
+## Payload Parser Code
+
+- Open the created device:
+
+<div align="center">
+  <img src="Screenshots/openDevice.jpg">
+</div>
+
+- Select "Payload Parser" tab and copy the code from "[Payload Parser Code](https://github.com/henriquekuhn/HTLRBL32/blob/main/Applications/Lora%20TagoIO%20interface/Payload%20Parser%20Code.txt)".
+
+<div align="center">
+  <img src="Screenshots/payloadParse.jpg">
+</div>
 
 ## Extra Documentation
 
-Datasheets and application notes can be found at the [HTLRBL32 Repository](https://github.com/htmicron/ht32sx).
+Datasheets and application notes can be found at [HTLRBL32 Repository](https://github.com/htmicron/ht32sx).
 
 ## References
 
-For additional information about S2LP or even more applications developed with this transceiver, check [S2LP Datasheet](https://www.st.com/resource/en/datasheet/s2-lp.pdf) and the [UM1904](https://www.st.com/resource/en/user_manual/dm00189294-getting-started-with-xcubesubg1-sub1-ghz-rf-software-expansion-for-stm32cube-stmicroelectronics.pdf) user manual written by STMicroelectronics.
+For additional information:
+
+* [HTLRBL32 datasheet](https://www.st.com/resource/en/datasheet/hts221.pdf).
+* [HTS221 datasheet](https://www.st.com/resource/en/datasheet/hts221.pdf). 
+* [LSP22HB datasheet](https://www.st.com/resource/en/application_note/an5209-lps22hh-mems-nano-pressure-sensor-stmicroelectronics.pdf).
+* [Semtech SX1308 LoRa® Gateway datasheet](https://www.mouser.com/datasheet/2/761/sx1308-1277867.pdf).
 
 
 ## Contact Information
