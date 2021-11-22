@@ -18,12 +18,17 @@ This section describes the basic test setup to running this application.
 
 * [Git](https://git-scm.com/downloads).
 * [uVision IDE](https://www2.keil.com/mdk5).
+* [PicoGW_UI](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/2R000000HUez/K0A_bK5uBvhvUjw3NULc7Fl9G3i34tgEa6k45TCzV3E) Software.
 * RS232 terminal ([Termite](https://www.compuphase.com/software_termite.htm) is recommended).
 * [ST-Link Debugger](https://www.st.com/en/development-tools/st-link-v2.html) to flash a firmware.
 * HTLRBL32 device.
 * Semtech SX1308 LoRa® Gateway.
 * HTS221 (temperature and humidity) and LSP22HB (pressure) I2C sensors.
 * FTDI (usb-serial converter – one for each device).
+
+# Configuring PicoGW_UI
+
+
 
 # Executing
 
@@ -55,7 +60,7 @@ git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLR
 </div>
 
 
-## The Things Network (TTN) Configuration
+# The Things Network (TTN) Configuration
 
 - Create a TTN account at "[TTN website](https://www.thethingsnetwork.org/)" and follow "[Adding TTN gateway guide](https://git-scm.com/downloads)" steps to add a new gateway. <br/>
 
