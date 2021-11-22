@@ -51,7 +51,7 @@ git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLR
 
 ## The Things Network (TTN)
 
-- Create a TTN account and follow "[Adding TN gateway guide]"(https://git-scm.com/downloads) steps to add a new gateway. <br/>
+- Create a TTN account and follow "[Adding TN gateway guide](https://git-scm.com/downloads)" steps to add a new gateway. <br/>
 
 ## Extra Documentation
 
