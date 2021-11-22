@@ -1,5 +1,11 @@
 # HTLRBL32- Web Platform (TagoIO)
 
+#TODO
+- TTN gateway config. tutorial.
+- PicoGW_UI config. Tutorial.
+- FW channels config. tutorial.
+
+
 ## Web Platform Monitoring Application
 
 Web Platform Monitoring Application is a web interface example which presents the data received from a HTLRBL32 device in a LoRaWAN network (The Things Network) in a cloud interface service (TigoIO). 
