@@ -894,7 +894,7 @@ static void ProcessRadioTxDone( void )
 				//sleeps LoRa Radio
         Radio.Sleep( );
     }
-	printf("RX1 Delay: %lu  RX2 Delay: %lu\n",MacCtx.RxWindow1Delay,MacCtx.RxWindow2Delay);
+	//printf("RX1 Delay: %lu  RX2 Delay: %lu\n",MacCtx.RxWindow1Delay,MacCtx.RxWindow2Delay);
 //		printf("time: %u\n",TimerGetCurrentTime());
 		/* RX1 window timer settings */
     TimerSetValue( &MacCtx.RxWindowTimer1, MacCtx.RxWindow1Delay );
@@ -965,9 +965,9 @@ static void ProcessRadioRxDone( void )
 
 		printf("LoRaWAN Payload Received: \n");
 		for(uint8_t x=0; x<size;x++){
-				printf("%02x",payload[x]);
+				//printf("%02x",payload[x]);
 		}
-    printf(" Size: %u, rssi: %d, snr :%d\n",size,rssi,snr);
+    //printf(" Size: %u, rssi: %d, snr :%d\n",size,rssi,snr);
 		
 	
     uint8_t pktHeaderLen = 0;
@@ -1463,7 +1463,7 @@ static void LoRaMacHandleIrqEvents( void )
     {
         if( events.Events.TxDone == 1 )
         {
-					printf("TX Done\n");
+					//printf("TX Done\n");
 
             ProcessRadioTxDone( );
         }
@@ -1768,7 +1768,7 @@ static void OnRxWindow1TimerEvent( void* context )
 //		printf("-------------------------------------------------------------------------------\n");
 //		printf("--------------------------------- RX Window 1 ---------------------------------\n");
 //		printf("-------------------------------------------------------------------------------\n");
-	printf("\n-RX1-\n");
+	//printf("\n-RX1-\n");
     MacCtx.RxWindow1Config.Channel = MacCtx.Channel;
     MacCtx.RxWindow1Config.DrOffset = MacCtx.NvmCtx->MacParams.Rx1DrOffset;
     MacCtx.RxWindow1Config.DownlinkDwellTime = MacCtx.NvmCtx->MacParams.DownlinkDwellTime;
@@ -1788,10 +1788,10 @@ static void OnRxWindow2TimerEvent( void* context )
 //		printf("-------------------------------------------------------------------------------\n");
 //		printf("--------------------------------- RX Window 2 ---------------------------------\n");
 //		printf("-------------------------------------------------------------------------------\n");
-	printf("\n-RX2-\n");
+	//printf("\n-RX2-\n");
     if( MacCtx.RxSlot == RX_SLOT_WIN_1 )
     {
-				  printf("RxWindow2ERROR\n");
+				  //printf("RxWindow2ERROR\n");
 
         return;
     }
@@ -2522,7 +2522,7 @@ static LoRaMacStatus_t ScheduleTx( bool allowDelayedTx )
 
     if( MacCtx.NvmCtx->NetworkActivation == ACTIVATION_TYPE_NONE )
     {
-				printf("NO NETWORK ACTIVATION\n");
+				//printf("NO NETWORK ACTIVATION\n");
 			
         MacCtx.RxWindow1Delay = MacCtx.NvmCtx->MacParams.JoinAcceptDelay1 + MacCtx.RxWindow1Config.WindowOffset;
         MacCtx.RxWindow2Delay = MacCtx.NvmCtx->MacParams.JoinAcceptDelay2 + MacCtx.RxWindow2Config.WindowOffset ;
@@ -4536,7 +4536,7 @@ LoRaMacStatus_t LoRaMacMlmeRequest( MlmeReq_t* mlmeRequest )
     {
         case MLME_JOIN:
         {
-						printf("OTAA JOIN REQUEST\n");
+						//printf("OTAA JOIN REQUEST\n");
             if( ( MacCtx.MacState & LORAMAC_TX_DELAYED ) == LORAMAC_TX_DELAYED )
             {
                 return LORAMAC_STATUS_BUSY;

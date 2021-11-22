@@ -127,7 +127,7 @@ float readTemperatureHTS221(void){
 }
 
 float readHumidity(void) {	
-	printf("Sampling humidity\n");
+
 	HAL_I2C_Mem_Read(&hi2c, 0xBF, 0x28, I2C_MEMADD_SIZE_8BIT, &dados[0], 1 , 500);
 	HAL_I2C_Mem_Read(&hi2c, 0xBF, 0x29, I2C_MEMADD_SIZE_8BIT, &dados[1], 1 , 500);
 	
@@ -144,9 +144,7 @@ float readPressure(void){
 	uint8_t dados[3];
 	uint8_t send[30];
 	int32_t aux;
-	
-	printf("Sampling pressure\n");
-	
+		
 	HAL_I2C_Mem_Read(&hi2c, 0xBB, 0x28, I2C_MEMADD_SIZE_8BIT, &dados[0], 1,500);
 	HAL_I2C_Mem_Read(&hi2c, 0xBB, 0x29, I2C_MEMADD_SIZE_8BIT, &dados[1], 1,500);
 	HAL_I2C_Mem_Read(&hi2c, 0xBB, 0x2A, I2C_MEMADD_SIZE_8BIT, &dados[2], 1,500);
@@ -154,7 +152,7 @@ float readPressure(void){
 	aux = (((uint32_t)dados[2]) << 16) | (((uint32_t)dados[1]) << 8) | ((uint32_t)dados[0]);
 	P = ((float)aux)/4095; /* Return pressure in hPa */
 	P = P * 0.0009869233;  /* Convert pressure to atm */
-	
+	printf("Pressure: %f\n", P);
 	return P;
 }
 
@@ -166,11 +164,12 @@ void txLora(void){
 		buff.humi = humidity*100;
 		buff.p = P*100;
 	
+		/*
 		printf("temperature: %.2f  ---- %04X\n", temp, buff.temperature); 
 		printf("humidity: %.2f  ---- %04X\n",humidity, buff.humi); 
-		printf("pressure: %.2f  ---- %04X\n",P, buff.p); 
-	
+		printf("pressure: %.2f  ---- %04X\n",P, buff.p); 	
 	  printf("\nBuffer TX: 0x%04X%04X%02X", buff.temperature, buff.humi, buff.p);
+		*/
 	
 		appData.Buff = (uint8_t *)&buff;
 

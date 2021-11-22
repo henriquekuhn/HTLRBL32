@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\htlrbl32l-lorawan-base.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\htlrbl32l-lorawan-base.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Nov 19 16:04:44 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Nov 22 14:16:13 2021
 <BR><P>
 <H3>Maximum Stack Usage =        808 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -163,9 +163,9 @@ Global Symbols
 <LI><a href="#[2cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VerifyRfFreq
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand1
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimer_TimeoutConfig
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
@@ -445,7 +445,6 @@ Global Symbols
 
 <P><STRONG><a name="[1ca]"></a>__aeabi_f2d</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, f2d.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnTxTimerEvent
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;txLora
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readTemperatureHTS221
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readPressure
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readHumidity
@@ -1061,8 +1060,8 @@ Global Symbols
 <P><STRONG><a name="[f3]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, bluenrg_lp_hal_msp.o(i.HAL_SPI_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HAL_SPI_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_EnableClock
+<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_EnableClock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
 </UL>
@@ -1131,8 +1130,8 @@ Global Symbols
 <P><STRONG><a name="[fe]"></a>HAL_UART_MspInit</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, bluenrg_lp_hal_msp.o(i.HAL_UART_MspInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HAL_UART_MspInit &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_EnableClock
+<BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_APB1_EnableClock
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Init
 </UL>
@@ -1334,14 +1333,14 @@ Global Symbols
 <P><STRONG><a name="[12d]"></a>IRQHandler_Config</STRONG> (Thumb, 92 bytes, Stack size 40 bytes, bluenrg_lp_hal_msp.o(i.IRQHandler_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = IRQHandler_Config &rArr; HAL_NVIC_SetPriority &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AHB_EnableClock
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_EXTI_SetConfigLine
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_EXTI_RegisterCallback
 <LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_EXTI_Cmd
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_EXTI_ClearPending
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AHB_EnableClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1369,8 +1368,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[137]"></a>LORA_Init</STRONG> (Thumb, 536 bytes, Stack size 64 bytes, lora.o(i.LORA_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 432<LI>Call Chain = LORA_Init &rArr; LoRaMacMibSetRequestConfirm &rArr; SwitchClass &rArr; RegionComputeRxWindowParameters &rArr; RegionUS915ComputeRxWindowParameters &rArr; RegionCommonComputeRxWindowParameters &rArr; ceil &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
+<P><STRONG><a name="[137]"></a>LORA_Init</STRONG> (Thumb, 356 bytes, Stack size 16 bytes, lora.o(i.LORA_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 384<LI>Call Chain = LORA_Init &rArr; LoRaMacMibSetRequestConfirm &rArr; SwitchClass &rArr; RegionComputeRxWindowParameters &rArr; RegionUS915ComputeRxWindowParameters &rArr; RegionCommonComputeRxWindowParameters &rArr; ceil &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRegion
 <LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacTestSetDutyCycleOn
@@ -1949,7 +1948,7 @@ Global Symbols
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;certif_rx
 </UL>
 
-<P><STRONG><a name="[143]"></a>LoRaMacMlmeRequest</STRONG> (Thumb, 486 bytes, Stack size 24 bytes, loramac.o(i.LoRaMacMlmeRequest))
+<P><STRONG><a name="[143]"></a>LoRaMacMlmeRequest</STRONG> (Thumb, 480 bytes, Stack size 24 bytes, loramac.o(i.LoRaMacMlmeRequest))
 <BR><BR>[Stack]<UL><LI>Max Depth = 440<LI>Call Chain = LoRaMacMlmeRequest &rArr; SendReJoinReq &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EventMacNvmCtxChanged
@@ -1969,7 +1968,6 @@ Global Symbols
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendReJoinReq
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacIsBusy
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ResetMacParameters
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_Join
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;certif_rx
@@ -2057,10 +2055,10 @@ Global Symbols
 <P><STRONG><a name="[1b0]"></a>MX_GPIO_Init</STRONG> (Thumb, 202 bytes, Stack size 24 bytes, bluenrg_lp_hal_msp.o(i.MX_GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = MX_GPIO_Init &rArr; HAL_GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AHB_EnableClock
+<LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_AHB_EnableClock
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -3551,7 +3549,6 @@ Global Symbols
 <LI><a href="#[230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionAS923Verify
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionAS923RxParamSetupReq
 <LI><a href="#[211]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionAS923ChannelAdd
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonChanVerifyDr
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
@@ -3561,6 +3558,7 @@ Global Symbols
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 </UL>
 
 <P><STRONG><a name="[19e]"></a>RegionComputeRxWindowParameters</STRONG> (Thumb, 168 bytes, Stack size 24 bytes, region.o(i.RegionComputeRxWindowParameters))
@@ -3847,10 +3845,10 @@ Global Symbols
 <P><STRONG><a name="[290]"></a>RegionEU868ComputeRxWindowParameters</STRONG> (Thumb, 120 bytes, Stack size 56 bytes, regioneu868.o(i.RegionEU868ComputeRxWindowParameters))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = RegionEU868ComputeRxWindowParameters &rArr; RegionCommonComputeRxWindowParameters &rArr; ceil &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetBandwidth
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeSymbolTimeLoRa
+<BR>[Calls]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeSymbolTimeLoRa
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeSymbolTimeFsk
 <LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeRxWindowParameters
+<LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetBandwidth
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionComputeRxWindowParameters
 </UL>
@@ -3913,10 +3911,10 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = RegionEU868NextChannel &rArr; RegionCommonUpdateBandTimeOff &rArr; TimerGetElapsedTime &rArr; HW_RTC_GetTimerValue &rArr; HW_RTC_GetCalendarValue &rArr; HAL_RTC_GetTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerGetElapsedTime
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;randr
 <LI><a href="#[227]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonUpdateBandTimeOff
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonCountChannels
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionNextChannel
@@ -3957,9 +3955,9 @@ Global Symbols
 <P><STRONG><a name="[2ba]"></a>RegionEU868TxConfig</STRONG> (Thumb, 242 bytes, Stack size 88 bytes, regioneu868.o(i.RegionEU868TxConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = RegionEU868TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetBandwidth
-<LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeTxPower
+<BR>[Calls]<UL><LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonComputeTxPower
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LimitTxPower
+<LI><a href="#[2af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetBandwidth
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionTxConfig
 </UL>
@@ -5028,12 +5026,11 @@ Global Symbols
 <LI><a href="#[1eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX126xInit
 </UL>
 
-<P><STRONG><a name="[1fd]"></a>SX126xSendPayload</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, sx126x.o(i.SX126xSendPayload))
-<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = SX126xSendPayload &rArr; SX126xSetPayload &rArr; SX126xWriteBuffer &rArr; SX126xCheckDeviceReady &rArr; SX126xWakeup &rArr; HW_SPI_InOut &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[1fd]"></a>SX126xSendPayload</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, sx126x.o(i.SX126xSendPayload))
+<BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = SX126xSendPayload &rArr; SX126xSetPayload &rArr; SX126xWriteBuffer &rArr; SX126xCheckDeviceReady &rArr; SX126xWakeup &rArr; HW_SPI_InOut &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX126xSetPayload
 <LI><a href="#[31a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX126xSetTx
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioSend
 </UL>
@@ -5791,21 +5788,18 @@ Global Symbols
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_Init
 <LI><a href="#[34b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_certif_running
 <LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setRegion
-<LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lorawan_send
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_ConfirmClass
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init
 <LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI1_Init
 <LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_RTC_Init
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnRxWindow1TimerEvent
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacHandleIrqEvents
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnCertifTxNextPacketTimerEvent
 <LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;certif_rx
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;certif_DownLinkIncrement
-<LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacMlmeRequest
 <LI><a href="#[148]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacMcpsRequest
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;McpsIndication
-<LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;txLora
 <LI><a href="#[1c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readTemperatureHTS221
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readPressure
 <LI><a href="#[1c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readHumidity
@@ -5851,11 +5845,8 @@ Global Symbols
 <LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacCommandsAddCmd
 <LI><a href="#[1ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PrepareFrame
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacIsBusy
-<LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScheduleTx
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessRadioTxDone
 <LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessRadioRxDone
 <LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessMacCommands
-<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnRxWindow2TimerEvent
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
@@ -5865,7 +5856,6 @@ Global Symbols
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountNbOfEnabledChannels
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX126xSetRfFrequency
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SX126xSendPayload
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioSetTxConfig
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioSetRxConfig
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RadioRxBoosted
@@ -6152,19 +6142,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initSensors
 </UL>
 
-<P><STRONG><a name="[1cc]"></a>lorawan_send</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lorawan_setup.o(i.lorawan_send))
+<P><STRONG><a name="[1cc]"></a>lorawan_send</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lorawan_setup.o(i.lorawan_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560<LI>Call Chain = lorawan_send &rArr; LORA_send &rArr; LoRaMacMcpsRequest &rArr; Send &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_send
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_JoinStatus
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORA_Join
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnTxTimerEvent
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;txLora
 </UL>
 
-<P><STRONG><a name="[29]"></a>main</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[29]"></a>main</STRONG> (Thumb, 68 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 808<LI>Call Chain = main &rArr; LORAWAN_tick &rArr; LoRaMacProcess &rArr; LoRaMacHandleIrqEvents &rArr; ProcessRadioRxDone &rArr; LoRaMacCryptoUnsecureMessage &rArr; VerifyCmacB0 &rArr; SecureElementVerifyAesCmac &rArr; ComputeCmac &rArr; AES_CMAC_Final &rArr; aes_encrypt &rArr; mix_sub_columns
 </UL>
 <BR>[Calls]<UL><LI><a href="#[34c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initSensors
@@ -6178,6 +6167,7 @@ Global Symbols
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LORAWAN_init
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQHandler_Config
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RESET_HANDLER
 </UL>
@@ -6313,7 +6303,7 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ComputeNext125kHzJoinChannel
 </UL>
 
-<P><STRONG><a name="[1c5]"></a>readHumidity</STRONG> (Thumb, 178 bytes, Stack size 32 bytes, ht_sensors.o(i.readHumidity))
+<P><STRONG><a name="[1c5]"></a>readHumidity</STRONG> (Thumb, 172 bytes, Stack size 32 bytes, ht_sensors.o(i.readHumidity))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = readHumidity &rArr; HAL_I2C_Mem_Read &rArr; I2C_RequestMemoryRead &rArr; I2C_WaitOnTXISFlagUntilTimeout &rArr; I2C_IsAcknowledgeFailed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
@@ -6327,7 +6317,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnSensorsTimerEvent
 </UL>
 
-<P><STRONG><a name="[1c6]"></a>readPressure</STRONG> (Thumb, 168 bytes, Stack size 40 bytes, ht_sensors.o(i.readPressure))
+<P><STRONG><a name="[1c6]"></a>readPressure</STRONG> (Thumb, 182 bytes, Stack size 40 bytes, ht_sensors.o(i.readPressure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = readPressure &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
@@ -6407,15 +6397,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacInitialization
 </UL>
 
-<P><STRONG><a name="[1c8]"></a>txLora</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, ht_sensors.o(i.txLora))
-<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = txLora &rArr; lorawan_send &rArr; LORA_send &rArr; LoRaMacMcpsRequest &rArr; Send &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
+<P><STRONG><a name="[1c8]"></a>txLora</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, ht_sensors.o(i.txLora))
+<BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = txLora &rArr; lorawan_send &rArr; LORA_send &rArr; LoRaMacMcpsRequest &rArr; Send &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lorawan_send
 <LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz
-<LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2iz
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnSensorsTimerEvent
 </UL>
@@ -6511,7 +6499,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[45]"></a>OnSensorsTimerEvent</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, ht_sensors.o(i.OnSensorsTimerEvent))
-<BR><BR>[Stack]<UL><LI>Max Depth = 600<LI>Call Chain = OnSensorsTimerEvent &rArr; txLora &rArr; lorawan_send &rArr; LORA_send &rArr; LoRaMacMcpsRequest &rArr; Send &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
+<BR><BR>[Stack]<UL><LI>Max Depth = 592<LI>Call Chain = OnSensorsTimerEvent &rArr; txLora &rArr; lorawan_send &rArr; LORA_send &rArr; LoRaMacMcpsRequest &rArr; Send &rArr; ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerStart
 <LI><a href="#[1c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;txLora
@@ -6801,7 +6789,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacProcess
 </UL>
 
-<P><STRONG><a name="[17e]"></a>LoRaMacHandleIrqEvents</STRONG> (Thumb, 150 bytes, Stack size 16 bytes, loramac.o(i.LoRaMacHandleIrqEvents))
+<P><STRONG><a name="[17e]"></a>LoRaMacHandleIrqEvents</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, loramac.o(i.LoRaMacHandleIrqEvents))
 <BR><BR>[Stack]<UL><LI>Max Depth = 792<LI>Call Chain = LoRaMacHandleIrqEvents &rArr; ProcessRadioRxDone &rArr; LoRaMacCryptoUnsecureMessage &rArr; VerifyCmacB0 &rArr; SecureElementVerifyAesCmac &rArr; ComputeCmac &rArr; AES_CMAC_Final &rArr; aes_encrypt &rArr; mix_sub_columns
 </UL>
 <BR>[Calls]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessRadioTxTimeout
@@ -6897,19 +6885,17 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> loramac.o(i.LoRaMacInitialization)
 </UL>
-<P><STRONG><a name="[33]"></a>OnRxWindow1TimerEvent</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, loramac.o(i.OnRxWindow1TimerEvent))
+<P><STRONG><a name="[33]"></a>OnRxWindow1TimerEvent</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, loramac.o(i.OnRxWindow1TimerEvent))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = OnRxWindow1TimerEvent &rArr; RxWindowSetup &rArr; TimerStop &rArr; TimerSetTimeout &rArr; HW_RTC_SetAlarm &rArr; HW_RTC_StartWakeUpAlarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxWindowSetup
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> loramac.o(i.LoRaMacInitialization)
 </UL>
-<P><STRONG><a name="[34]"></a>OnRxWindow2TimerEvent</STRONG> (Thumb, 94 bytes, Stack size 8 bytes, loramac.o(i.OnRxWindow2TimerEvent))
+<P><STRONG><a name="[34]"></a>OnRxWindow2TimerEvent</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, loramac.o(i.OnRxWindow2TimerEvent))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = OnRxWindow2TimerEvent &rArr; RxWindowSetup &rArr; TimerStop &rArr; TimerSetTimeout &rArr; HW_RTC_SetAlarm &rArr; HW_RTC_StartWakeUpAlarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxWindowSetup
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> loramac.o(i.LoRaMacInitialization)
 </UL>
@@ -6974,7 +6960,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessRadioRxDone
 </UL>
 
-<P><STRONG><a name="[180]"></a>ProcessRadioRxDone</STRONG> (Thumb, 1952 bytes, Stack size 176 bytes, loramac.o(i.ProcessRadioRxDone))
+<P><STRONG><a name="[180]"></a>ProcessRadioRxDone</STRONG> (Thumb, 1868 bytes, Stack size 176 bytes, loramac.o(i.ProcessRadioRxDone))
 <BR><BR>[Stack]<UL><LI>Max Depth = 776<LI>Call Chain = ProcessRadioRxDone &rArr; LoRaMacCryptoUnsecureMessage &rArr; VerifyCmacB0 &rArr; SecureElementVerifyAesCmac &rArr; ComputeCmac &rArr; AES_CMAC_Final &rArr; aes_encrypt &rArr; mix_sub_columns
 </UL>
 <BR>[Calls]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerStop
@@ -7021,14 +7007,13 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacHandleIrqEvents
 </UL>
 
-<P><STRONG><a name="[17f]"></a>ProcessRadioTxDone</STRONG> (Thumb, 234 bytes, Stack size 24 bytes, loramac.o(i.ProcessRadioTxDone))
+<P><STRONG><a name="[17f]"></a>ProcessRadioTxDone</STRONG> (Thumb, 222 bytes, Stack size 24 bytes, loramac.o(i.ProcessRadioTxDone))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = ProcessRadioTxDone &rArr; TimerSetValue &rArr; TimerStop &rArr; TimerSetTimeout &rArr; HW_RTC_SetAlarm &rArr; HW_RTC_StartWakeUpAlarm &rArr; HAL_RTC_SetAlarm_IT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerStart
 <LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerSetValue
 <LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionSetBandTxDone
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionGetPhyParam
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LoRaMacHandleIrqEvents
 </UL>
@@ -7070,7 +7055,7 @@ Local Symbols
 <LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnRxWindow2TimerEvent
 </UL>
 
-<P><STRONG><a name="[1c9]"></a>ScheduleTx</STRONG> (Thumb, 510 bytes, Stack size 48 bytes, loramac.o(i.ScheduleTx))
+<P><STRONG><a name="[1c9]"></a>ScheduleTx</STRONG> (Thumb, 504 bytes, Stack size 48 bytes, loramac.o(i.ScheduleTx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 392<LI>Call Chain = ScheduleTx &rArr; SendFrameOnChannel &rArr; RegionTxConfig &rArr; RegionRU864TxConfig &rArr; RegionCommonComputeTxPower &rArr; floor &rArr; __aeabi_drsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerStart
@@ -7083,7 +7068,6 @@ Local Symbols
 <LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendFrameOnChannel
 <LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ValidatePayloadLength
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SecureFrame
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendReJoinReq
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Send
@@ -7594,7 +7578,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[2e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionUS915NextChannel
 </UL>
 
-<P><STRONG><a name="[b1]"></a>CountNbOfEnabledChannels</STRONG> (Thumb, 214 bytes, Stack size 48 bytes, regionus915.o(i.CountNbOfEnabledChannels))
+<P><STRONG><a name="[b1]"></a>CountNbOfEnabledChannels</STRONG> (Thumb, 206 bytes, Stack size 48 bytes, regionus915.o(i.CountNbOfEnabledChannels))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = CountNbOfEnabledChannels &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RegionCommonValueInRange

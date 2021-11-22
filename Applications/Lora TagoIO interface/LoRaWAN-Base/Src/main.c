@@ -53,7 +53,9 @@ int main(void)
 	MX_SPI1_Init();					/*SPI Initialization*/	
 	MX_RTC_Init();					/*RTC Initialization*/
 	MX_I2C2_Init();					/*Initializes LoRaWAN stack and radio*/
-			
+	
+	printf("HTLRBL32 - Web Platform (TagoIO) Application\n");	
+	
 	LORAWAN_init(DEFAULT_REGION);	/*initialize LoRaWan radio parameters*/
 	
 	initSensors();		/*Initialize sensors config.*/

@@ -112,7 +112,7 @@ void setRegion(uint8_t region){
 //    REGION_RU864 = 9;
 	
 	if(region<10){
-		  printf("Setting Region: %s\n",regions[region]);
+		  printf("\nSetting Region: %s\n",regions[region]);
 			global_region = region;
 	}else{
 		printf("Invalid region parameter, reverting to region: %d\n",global_region);
@@ -125,7 +125,7 @@ uint8_t getRegion(void){
 void lorawan_send(lora_AppData_t *appData){
 	
 //	printf("===============================================================================\n");
-	printf("\n-LoRaWAN TX-\n");
+	//printf("\n-LoRaWAN TX-\n");
 //	printf("===============================================================================\n");
 	
 	if ( LORA_JoinStatus () != LORA_SET)

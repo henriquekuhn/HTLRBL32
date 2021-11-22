@@ -1,4 +1,4 @@
-# HTLRBL32- Web Platform(TagoIO)
+# HTLRBL32- Web Platform (TagoIO)
 
 ## Web Platform Monitoring Application
 
@@ -21,19 +21,20 @@ This section describes the basic test setup to running this application.
 * RS232 terminal ([Termite](https://www.compuphase.com/software_termite.htm) is recommended).
 * [ST-Link Debugger](https://www.st.com/en/development-tools/st-link-v2.html) to flash a firmware.
 * HTLRBL32 device.
+* Semtech SX1308 LoRa® Gateway.
 * HTS221 (temperature and humidity) and LSP22HB (pressure) I2C sensors.
 * FTDI (usb-serial converter – one for each device).
 
 # Executing
 
-1. Clone the master branch related to the hardware version 2.2: <br/>
+1. Clone the master branch: <br/>
 
 ```
-git clone --single-branch --branch master_2 https://github.com/htmicron/ht32sx.git 
+git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLRBL32.git
 ```
 
-2. Open HT32SX_P2P_Demo directory and then, double click .cproject file to open STM32CubeIDE. 
-3. Click *Run* to compile and flash the new firmware into your device: <br/>
+2. Open "Lora TagoIO interface\LoRaWAN-Base\MDK-ARM\HTLRBL32L" directory and then, double click htlrbl32l-lorawan-base.uvprojx file to open uVision. 
+3. Click *Build* to compile and *Load* ti flash the new firmware into your device: <br/>
 
 <div align="center">
   <img src="Screenshots/run.jpg">
@@ -44,34 +45,17 @@ git clone --single-branch --branch master_2 https://github.com/htmicron/ht32sx.g
 4. Open Termite and reset your device to check if the initial string was printed on serial. <br/>
 
 <div align="center">
-  <img src="Screenshots/termite1.PNG">
+  <img src="Screenshots/Termite.jpg">
 </div>
 
-5. Do the same (steps 3 and 4) with other devices that is going to be part of this test.
-6. Press the button of one of tested devices and check if the message “Hello, World!” will be shown in the other terminal:
 
-<div align="center">
-  <img src="Screenshots/termite2.PNG">
-</div>
+## The Things Network (TTN)
 
-<br/>
-
-7. Check if the user led is blinking after receiving any message. <br/>
-
-## Changing Destination/Source Address - Broadcast/Multicast Messages
-
-- Changing destination or source address: <br/>
-    - Open *HT_P2P_app.h* file and change *MY_ADDRESS* or *DESTINATION_ADDRESS* constants to the new value wanted (value must be less or equal than 1 byte).
-- Sending broadcast and multicast messages: <br/>
-    - Open *HT_P2P_app.c* file and change *S2LP_SetDestinationAddress* (located in *AppliSendBuff* function) argument to *BROADCAST_ADDRESS* or *MULTICAST_ADDRESS* defines. Example:
-
-<div align="center">
-  <img src="Screenshots/example.jpg">
-</div>
+- Create a TTN account and follow "[Adding TN gateway guide]"(https://git-scm.com/downloads) steps to add a new gateway. <br/>
 
 ## Extra Documentation
 
-Datasheets and application notes can be found at the [HT32SX Repository](https://github.com/htmicron/ht32sx).
+Datasheets and application notes can be found at the [HTLRBL32 Repository](https://github.com/htmicron/ht32sx).
 
 ## References
 
