@@ -96,6 +96,13 @@ git clone --single-branch --branch master_2 https://github.com/henriquekuhn/HTLR
   <img src="Screenshots/payloadParse.jpg">
 </div>
 
+- Create a Dashboard by following the TagoIO documentation: "[Dashboard Overview](https://docs.tago.io/en/articles/15-dashboard-overview)".
+
+<div align="center">
+  <img src="Screenshots/newDash.jpg">
+</div>
+
+
 ## Extra Documentation
 
 Datasheets and application notes can be found at [HTLRBL32 Repository](https://github.com/htmicron/ht32sx).
